@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Tip-Calculator App</title>
+
+  </head>
+  <body class="bg-lightGrayishCyan md:flex md:justify-center md:items-center md:min-h-screen  ">
+    <div class="">
+      <h1
+        class="text-darkGrayishCyan font-semibold text-4xl font-space-mono text-center mb-2 tracking-ultra-wide leading-normal w-2/3 mx-auto "
+      >
+        SPLI<br />TTER
+      </h1>
+      <div>
+        <div class="p-10 bg-white rounded-3xl md:w-3/4  md:mx-auto ">
+          <div class="md:grid md:grid-cols-2 md:gap-7">
+            <div>
+              <form action="" class="mt-2">
+                <label
+                  for="bill"
+                  class="text-xl font-space-mono text-darkGrayishCyan font-semibold "
+                  >Bill</label
+                >
+                <div class="relative">
+                  <span class="absolute inset-y-1/3 top-1.5 left-0 flex items-center pl-3 text-grayishCyan font-bold text-lg">$</span>
+                  <input
+                    type="number"
+                    id="bill"
+                    placeholder=""
+                    class="text-right pl-8 rounded-md px-5 py-2 focus:outline-strongCyan w-full bg-veryLightGrayishCyan text-veryDarkCyan font-semibold font-space-mono mt-2 mb-6"
+                  />
+                </div>
+                <label
+                  for="tip"
+                  class="text-xl font-space-mono text-darkGrayishCyan font-semibold"
+                  >Select Tip %</label
+                >
+                <div class="grid grid-cols-2 md:grid-cols-3 mt-4 mb-7 font-space-mono gap-3 md:gap-1">
+                  <button class="bg-veryDarkCyan text-white rounded-md px-4 py-1.5 font-bold hover:bg-lightGrayishCyan hover:text-veryDarkCyan tipPercentage" data-value="5">5%</button>
+                  <button class="bg-veryDarkCyan text-white rounded-md px-4 py-1.5 font-bold hover:bg-lightGrayishCyan hover:text-veryDarkCyan tipPercentage" data-value="10">10%</button>
+                  <button class="bg-veryDarkCyan text-white rounded-md px-4 py-1.5 font-bold hover:bg-lightGrayishCyan hover:text-veryDarkCyan tipPercentage" data-value="15">15%</button>
+                  <button class="bg-veryDarkCyan text-white rounded-md px-4 py-1.5 font-bold hover:bg-lightGrayishCyan hover:text-veryDarkCyan tipPercentage" data-value="25">25%</button>
+                  <button class="bg-veryDarkCyan text-white rounded-md px-4 py-1.5 font-bold hover:bg-lightGrayishCyan hover:text-veryDarkCyan tipPercentage" data-value="50">50%</button>
+                  <input type="text" placeholder="Custom" class="text-right bg-veryLightGrayishCyan text-darkGrayishCyan placeholder:font-space-mono placeholder:text-darkGrayishCyan rounded-md px-4 py-2 placeholder:font-bold font-bold placeholder:text-center focus:outline-strongCyan md:px-1 md:tracking-tight"></input>
+                </div>
+                <div class="flex flex-row justify-between ">
+                  <label
+                    for="numOfPeople"
+                    class="text-xl font-space-mono text-darkGrayishCyan font-semibold "
+                    >Number of People </label
+                  >
+                  <p id="warning" class="text-red-500 faont-space-mono font-semibold text-right hidden text-lg ">Can't be zero</p>
+                </div>
+                <div class="relative">
+                  <span class="absolute inset-y-1/3 top-1.5 left-0 flex items-center pl-3 text-grayishCyan font-bold text-lg"><i class="fa fa-user" aria-hidden="true"></i></i></span>
+                  <input
+                    type="number"
+                    id="numOfPeople"
+                    placeholder=""
+                    class="text-right pl-8 rounded-md px-5 py-2 focus:outline-strongCyan w-full bg-veryLightGrayishCyan text-veryDarkCyan font-semibold font-space-mono mt-2 mb-6"
+                    
+                  />
+                </div>
+              </form>
+            </div>
+            <div>
+              <div class="grid grid-cols-2 bg-veryDarkCyan mt-4 py-5 px-6 rounded-xl">
+                <h3 class="text-veryLightGrayishCyan font-space-mono p-2 mt-3 font-bold">Tip Amount<br><span class="text-darkGrayishCyan"> /  person</span> </h3>
+                <div id="tipAmountDisplay"  class="bg-veryDarkCyan focus:outline-none  p-2 mt-3 text-3xl font-semibold text-right text-strongCyan">$0.00</div>
+                <h3 class="text-veryLightGrayishCyan font-space-mono p-2 mt-3 font-bold">Total<br><span class="text-darkGrayishCyan"> /  person</span> </h3>
+                <div id="Total" class="bg-veryDarkCyan focus:outline-none  p-2 mt-3 text-3xl font-semibold text-right text-strongCyan">$0.00</div>
+                <button id="reset"class="col-span-2 bg-strongCyan w-4/5 mx-auto px-2 py-2 rounded-md mt-5 md:mt-20 text-veryDarkCyan font-space-mono font-bold hover:bg-lightGrayishCyan ">RESET</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  </div>
+  </body>
+</html>
